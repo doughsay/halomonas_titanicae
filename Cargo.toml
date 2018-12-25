@@ -1,0 +1,8 @@
+[package]
+name = "rusty_life"
+version = "0.1.0"
+authors = ["Chris Dosé <chris.dose@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.6"
