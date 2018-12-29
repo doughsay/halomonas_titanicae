@@ -52,9 +52,9 @@ pub fn print_state(state: &WorldState) {
       let i = y * state.size.height + x;
 
       if vec[i] {
-        print!(" ");
+        print!("◻");
       } else {
-        print!("█");
+        print!("◼");
       }
 
       if x == (state.size.width - 1) {
