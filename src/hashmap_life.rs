@@ -1,3 +1,9 @@
+/*
+A simple naive implementation of Life using a HashMap to store boolean cell states.
+Easy to lookup and set cell states, but ends up being way too slow due to all the hashing going on.
+Supports an unbounded world though, so that's a plus.
+*/
+
 use rand::Rng;
 use std::collections::HashMap;
 

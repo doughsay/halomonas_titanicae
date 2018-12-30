@@ -1,3 +1,8 @@
+/*
+A simple naive implementation of Life based on a fixed size contiguous array of cell states.
+Easy to lookup and set cell states quickly, but limited to a fixed world size and wastes a lot of time on empty space.
+*/
+
 use rand::Rng;
 
 enum ActiveBuffer {
