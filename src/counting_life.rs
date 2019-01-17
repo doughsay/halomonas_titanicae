@@ -90,6 +90,27 @@ pub fn print_state(state: &WorldState) {
   }
 }
 
+pub fn coords(state: &WorldState) -> Vec<(usize, usize)> {
+  let vec = match state.active {
+    ActiveBuffer::Front => &state.front,
+    ActiveBuffer::Back => &state.back,
+  };
+
+  let mut coords: Vec<(usize, usize)> = Vec::new();
+
+  for y in 0..state.size.height {
+    for x in 0..state.size.width {
+      let i = y * state.size.height + x;
+
+      if vec[i].state {
+        coords.push((x, y))
+      }
+    }
+  }
+
+  coords
+}
+
 pub fn tick(state: &mut WorldState) {
   let (read, write) = match state.active {
     ActiveBuffer::Front => (&mut state.front, &mut state.back),
